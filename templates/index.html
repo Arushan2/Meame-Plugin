@@ -92,8 +92,8 @@
         });
     
         function download() {
-            canvas.toBlob(function(blob) {
-                console.log("Downoad button pressed")
+            var canvasEl = canvas.getElement(); // Get the HTML canvas element from Fabric.js canvas
+            canvasEl.toBlob(function(blob) {
                 var url = URL.createObjectURL(blob);
                 var link = document.createElement('a');
                 link.download = 'canvas_image.png';
@@ -104,6 +104,7 @@
                 URL.revokeObjectURL(url); // Clean up the URL object
             }, 'image/png');
         }
+
 
     </script>
     
