@@ -51,13 +51,13 @@
             height: topRectHeight
         });
     
-        var bottomRect = new fabric.Rect({
-            left: 0,
-            top: 0, // Will be updated after the image is loaded
-            fill: rectColor,
-            width: 800,
-            height: bottomRectHeight
-        });
+        // var bottomRect = new fabric.Rect({
+        //     left: 0,
+        //     top: 0, // Will be updated after the image is loaded
+        //     fill: rectColor,
+        //     width: 800,
+        //     height: bottomRectHeight
+        // });
     
         fabric.Image.fromURL(imageUrl, function(oImg) {
             var totalHeight = topRectHeight + oImg.height + bottomRectHeight;
